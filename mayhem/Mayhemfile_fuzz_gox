@@ -1,0 +1,9 @@
+project: savantenvs/vengi
+target: fuzz_gox
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gox/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gox
+    libfuzzer: true
+    timeout: 30
